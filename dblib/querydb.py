@@ -2,7 +2,7 @@ from databricks import sql
 import os
 
 
-def querydb(query="1"):
+def querydb(query="SELECT color, avg(price) AS price FROM diamonds GROUP BY color ORDER BY color"):
     with sql.connect(
         server_hostname=os.getenv("DATABRICKS_SERVER_HOSTNAME"),
         http_path=os.getenv("DATABRICKS_HTTP_PATH"),
@@ -10,7 +10,7 @@ def querydb(query="1"):
     ) as connection:
 
         with connection.cursor() as cursor:
-            cursor.execute("SELECT Weekly_Sales, Date FROM walmart WHERE Holiday_Flag="+query+" ORDER BY Weekly_Sales DESC LIMIT 10")
+            cursor.execute(query)
             result = cursor.fetchall()
 
         for row in result:
