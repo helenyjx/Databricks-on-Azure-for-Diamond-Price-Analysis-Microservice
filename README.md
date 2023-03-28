@@ -13,6 +13,17 @@ The specific objective of the project is to use SQL to extract information from 
 
 The significance of this project lies in its demonstration of how a large data platform like Databricks on Azure can be used to efficiently process and analyze large datasets. The use of SQL to extract data from the dataset and Python to build a web microservice highlights the versatility and power of these tools in data engineering. Additionally, the insights gained from this project can be useful for those in the diamond industry, such as diamond sellers or buyers, as they can use the information to make informed decisions about pricing and purchasing.
 
+## Coding for microservice
+1. Set up connection betweeen codespace and datarbircks
+<img width="687" alt="Screen Shot 2023-03-27 at 8 09 14 PM" src="https://user-images.githubusercontent.com/112274822/228094228-cd73249b-e513-4dba-bca8-dc81b6025a6f.png">
+
+This is a Python function that connects to an Azure Databricks cluster using the Databricks SQL endpoint and executes a SQL query against the diamonds table. The query calculates the average price of diamonds for each different color and sorts the results by color. The databricks.sql module provides a Python interface for executing SQL commands against Databricks. The os.getenv() function is used to retrieve the values of the Databricks server hostname, HTTP path, and access token from environment variables, which are required to authenticate and connect to the cluster.
+
+The with statement is used to create a connection to the Databricks cluster using the sql.connect() function. Within the with block, a cursor object is created using connection.cursor(), and the SQL query is executed using cursor.execute(). The results of the query are then fetched using cursor.fetchall(), and printed to the console using a for loop. The function returns the results of the SQL query as a list of tuples, which can be used for further analysis or visualization in a Python program or notebook.
+
+2. 
+
+
 ## Connect Codespace and Databricks
 1. Create an account on the Azure portal (https://portal.azure.com/)
 2. Go to the Azure Databricks Marketplace page (https://azuremarketplace.microsoft.com/en-us/marketplace/apps/databricks.databricks) to create an Azure Databricks workspace
