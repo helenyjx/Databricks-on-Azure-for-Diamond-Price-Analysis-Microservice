@@ -34,6 +34,7 @@ The significance of this project lies in its demonstration of how a large data p
 <img width="422" alt="Screen Shot 2023-03-27 at 7 00 55 PM" src="https://user-images.githubusercontent.com/112274822/228089952-153059c8-831d-48f2-86bb-2a7fcf57d8e8.png">
 <img width="896" alt="Screen Shot 2023-03-27 at 7 01 22 PM" src="https://user-images.githubusercontent.com/112274822/228090087-033063a7-5cc0-4a7f-b3e3-0a7fe75243d9.png">
 <img width="811" alt="Screen Shot 2023-03-27 at 7 01 42 PM" src="https://user-images.githubusercontent.com/112274822/228090133-5c0fbddf-542c-413e-ad70-9a867fff5ed5.png">
+  
 Enabling the DBFS File Browser in the Azure Databricks Workspace Settings allows users to easily navigate and access files stored in the Databricks File System (DBFS) using a graphical interface. The DBFS File Browser provides a familiar directory tree structure and allows users to upload, download, and manage files and folders within the DBFS directly from the workspace.
 
 8. In the Azure Databricks portal, click on "User Setting" in the right-hand menu, then click "Genereate new token", wou can then use this access token to authenticate our Codespace when connecting to our Databricks workspace using Databricks Connect.
@@ -48,4 +49,31 @@ Enabling the DBFS File Browser in the Azure Databricks Workspace Settings allows
 
 Note that our link should follow below information when create the token at Github:
 <img width="842" alt="Screen Shot 2023-03-24 at 6 57 09 PM" src="https://user-images.githubusercontent.com/112274822/228091391-b804391d-e4fc-4d2a-903b-20178fcbf3ab.png">
+  
+## Visualize and interact with the target dataset in Databricks using SQL
+1. In the Databricks portal, create a new notebook by clicking on "Workspace" in the left-hand menu, selecting the folder where you want to create the notebook, and clicking "Create" -> "Notebook."
+<img width="396" alt="Screen Shot 2023-03-27 at 7 49 00 PM" src="https://user-images.githubusercontent.com/112274822/228091723-a4439522-e286-42cb-9c29-26feb2b10689.png">
+  
+2. Give your notebook a name and select the language as SQL. Use the CREATE TABLE statement to create a new table in Databricks that points to your dataset. For example, you can run the following SQL command:
+<img width="1123" alt="Screen Shot 2023-03-27 at 7 51 51 PM" src="https://user-images.githubusercontent.com/112274822/228092067-891e3516-4f6e-41e3-b53b-cc791e9032a6.png">
+  
+3. Run SQL queries against the diamonds table to explore and analyze the data. Here is my example:
+<img width="763" alt="Screen Shot 2023-03-27 at 7 05 25 PM" src="https://user-images.githubusercontent.com/112274822/228091910-bfa82d2f-26f8-4e4e-b483-0f7288178b35.png">
+  
+## Github connection checking
+1. Use `databricks fs ls dbfs:/` to make sure the connection is successful between codespace and databricks:
+<img width="548" alt="Screen Shot 2023-03-27 at 6 57 56 PM" src="https://user-images.githubusercontent.com/112274822/228092436-ba6e95e4-894f-4b71-83f1-39e27c48554e.png">
+  
+2, We can also try ipyhon os to see our token links are same as the inforamtion from JDBC/ODBC on databricks:
+<img width="500" alt="Screen Shot 2023-03-27 at 8 01 03 PM" src="https://user-images.githubusercontent.com/112274822/228093087-d396e032-b60a-410a-a40a-272cee81f642.png">
+
+## Web microservice deployment
+1. Type "python fastapi_app.py" to open the fastapi
+<img width="527" alt="Screen Shot 2023-03-27 at 6 58 03 PM" src="https://user-images.githubusercontent.com/112274822/228093284-f95d2d5e-7956-4747-907c-36f56ea45cd0.png">
+
+2. Once I use "/query" at the end of the link, it will return the average price for each different color levels of diamonds
+<img width="685" alt="Screen Shot 2023-03-27 at 6 43 01 PM" src="https://user-images.githubusercontent.com/112274822/228093562-60bce314-f9c1-4f6f-8b2f-ea40c9cca308.png">
+<img width="1436" alt="Screen Shot 2023-03-27 at 6 56 37 PM" src="https://user-images.githubusercontent.com/112274822/228093485-7a58a3ce-aa00-4dfb-89e5-679d0097a659.png">
+
+  
 
