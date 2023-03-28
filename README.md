@@ -10,7 +10,7 @@
 ## Key Objectives of Project
 The goal of this project is to showcase the use of a large data platform, specifically Databricks on Azure, for data engineering tasks. The dataset used is from Kaggle (https://www.kaggle.com/datasets/shivam2503/diamonds) and contains information about diamonds, including price, carat weight, cut quality, color, clarity, and physical dimensions.
 
-The specific objective of the project is to use SQL to extract information from the dataset and find the average price of diamonds for each different color. This information will then be used to build a functional web microservice using Python and FastAPI, which will allow users to easily view the average prices for different diamond colors.
+The specific objective of the project is to use SQL to extract information from the dataset and find the average price of diamonds for each different color. This information will then be used to build a functional web microservice using Python and FastAPI, which will allow users to easily view the average prices for different levels of the diamond colors.
 
 The significance of this project lies in its demonstration of how a large data platform like Databricks on Azure can be used to efficiently process and analyze large datasets. The use of SQL to extract data from the dataset and Python to build a web microservice highlights the versatility and power of these tools in data engineering. Additionally, the insights gained from this project can be useful for those in the diamond industry, such as diamond sellers or buyers, as they can use the information to make informed decisions about pricing and purchasing.
 
