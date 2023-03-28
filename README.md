@@ -5,6 +5,7 @@
 ## Demo Video Link
 
 ## Structure Diagram
+<img width="519" alt="Screen Shot 2023-03-27 at 8 35 25 PM" src="https://user-images.githubusercontent.com/112274822/228096831-d69cf220-cdf5-44b5-a7c0-2a843b0fad77.png">
 
 ## Key Objectives of Project
 The goal of this project is to showcase the use of a large data platform, specifically Databricks on Azure, for data engineering tasks. The dataset used is from Kaggle (https://www.kaggle.com/datasets/shivam2503/diamonds) and contains information about diamonds, including price, carat weight, cut quality, color, clarity, and physical dimensions.
