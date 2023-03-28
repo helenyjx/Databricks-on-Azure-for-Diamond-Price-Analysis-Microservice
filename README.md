@@ -21,8 +21,12 @@ This is a Python function that connects to an Azure Databricks cluster using the
 
 The with statement is used to create a connection to the Databricks cluster using the sql.connect() function. Within the with block, a cursor object is created using connection.cursor(), and the SQL query is executed using cursor.execute(). The results of the query are then fetched using cursor.fetchall(), and printed to the console using a for loop. The function returns the results of the SQL query as a list of tuples, which can be used for further analysis or visualization in a Python program or notebook.
 
-2. 
+2. Create the fastapi app:
+<img width="646" alt="Screen Shot 2023-03-27 at 8 13 32 PM" src="https://user-images.githubusercontent.com/112274822/228094560-e9e3b2b6-8ed6-4fa6-99f3-057c900751c1.png">
 
+This is a Python script that uses the FastAPI web framework to create a simple web microservice that allows users to execute a SQL query against the diamonds table and retrieve the results as a JSON response. The fastapi and uvicorn modules are imported to create and run the web server, respectively. The querydb function from a dblib module is imported to execute the SQL query.
+
+The app object is created using FastAPI(), and two routes are defined using the @app.get() decorator. The root() function returns a simple message when the user visits the root endpoint, and the query() function executes the SQL query using the querydb() function and returns the results as a JSON response. The if __name__ == "__main__" block is used to run the web server using uvicorn.run(). The port and host arguments are set to 8080 and "0.0.0.0", respectively, to bind the web server to all network interfaces and listen on port 8080.
 
 ## Connect Codespace and Databricks
 1. Create an account on the Azure portal (https://portal.azure.com/)
